@@ -2,7 +2,7 @@
   "name": "stereum-launcher",
   "version": "2.0.0-rc.24",
   "private": true,
-  "description": "Stereum Ethereum Node Setup Launcher",
+  "description": "Stereum Ethereum Node Setup Launcher - test",
   "author": "stereum.net",
   "scripts": {
     "serve": "vue-cli-service serve --port 8081",
