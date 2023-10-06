@@ -72,17 +72,11 @@ jobs:
         if: ${{ !contains(github.event.head_commit.message, '[NOCI]') }}
 
       - name: Signing using Signtool on windows-latest
-        #signtool.exe sign /debug /tr http://timestamp.digicert.com /td SHA256 /fd  SHA256 /sha1 ${{ secrets.SM_CODE_SIGNING_CERT_SHA1_HASH }} "D:\a\ethereum-node\ethereum-node\launcher\dist\win32\Stereum-Launcher-Setup-${{ steps.variables.outputs.version }}.exe"
         run: |
           dir D:\a\ethereum-node\ethereum-node-digicert\launcher\dist\win32\          
           signtool.exe verify /v /pa "D:\a\ethereum-node-digicert\ethereum-node-digicert\launcher\dist\win32\Stereum-Launcher-Setup-${{ steps.variables.outputs.version }}.exe"
         shell: cmd
         if: ${{ !contains(github.event.head_commit.message, '[NOCI]') && matrix.os == 'windows-latest' }}
-      #- name: Signtool logs on windows-latest
-      ##  run: |
-      #    cat /c/Users/runneradmin/.signingmanager/logs/smksp.log
-      #  shell: bash
-      #  if: always() && matrix.os == 'windows-latest'
 
       - name: Debug
         run: |
