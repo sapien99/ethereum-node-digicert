@@ -74,7 +74,7 @@
     }
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:stereum-dev/ethereum-node.git"
+    "type": "git",    
+    "url": "git@github.com:sapien99/ethereum-node-digicert.git"    
   }
 }
